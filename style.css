@@ -1,0 +1,957 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 2px;
+    margin: 1px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #2d2d2d;
+    width: 100vw;
+
+   
+    
+}
+
+.cover {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-image: url(image/background.png);
+    background-size: cover;
+}
+
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    top: 0;
+    z-index: 20;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10%;
+    background-color: #2d2d2d;
+
+}
+
+.itilogo {
+    position: absolute;
+    /* width: 40px; */
+    /* margin-top: 15px; */
+    top: 0.5cm;
+    left: 4vw;
+}
+
+.itilogo img {
+    width: 200px;
+    height: 40px;
+}
+
+
+.govtlogo {
+    position: absolute;
+    top: 0.2cm;
+    left: 45vw;
+    /* width: 40px; */
+}
+
+.govtlogo img {
+    width: 70px;
+    height: 60px;
+}
+
+.navbar {
+    display: flex;
+    width: 38%;
+    position: absolute;
+    top: 20px;
+    left: 58%;
+    border-radius: 20px;
+}
+
+
+
+.nav_links {
+    background-color: rgb(22, 104, 175);
+    width: 100%;
+    height: 90%;
+
+}
+
+.activelink {
+    background-color: #0a1701;
+    border-radius: 10px;
+}
+
+
+.nav_link .dropdown li {
+    display: block;
+    padding: 5px 0;
+    list-style: none;
+    cursor: pointer;
+
+}
+
+.activeLink {
+    background-color: #a70d0d;
+}
+
+.dropdown {
+    position: absolute;
+    padding: 0px 5px;
+    display: none;
+
+}
+
+.Trade:hover .dropdown {
+    display: block;
+    background-color: #fb00ff88;
+    padding: 3px 5px;
+    margin: 1px 0px;
+}
+
+.nav_link :hover {
+    background-color: #f7f6f9b8;
+}
+
+li {
+    display: inline-block;
+    padding: 0px 10px;
+
+}
+
+a {
+
+    font-family: "monterrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fdfcfa;
+    text-decoration: none;
+    padding: 0px 5px;
+
+}
+
+.active {
+    background-color: #dae6d1;
+    color: #00000e;
+ 
+}
+
+
+#home{
+    width: 100%;
+    background-image:url(image/mix.png) ;
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    padding: 5%;
+    border-radius: 30px;
+    z-index: -1;
+    
+}
+
+
+
+
+.image_aboutus {
+    width: 40vw;
+    height: 70vh;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+
+img.image {
+    max-width: 400px;
+    max-height: 520px;
+    position: relative;
+    top: 6vh;
+    border-radius: 30px;
+    z-index: -1;
+
+}
+
+
+span {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1rem;
+    padding: 20px 30px;
+    color: white;
+    font-weight: 200;
+}
+
+
+
+
+video {
+    padding-left: 3%;
+    padding-bottom: 3%;
+    width: 95vw;
+    height: 75vh;
+}
+
+
+
+nav ul li.active {
+
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+
+
+/* octoganal rotaion */
+
+
+
+.rotate {
+    margin-top: 10%;
+    margin-left: 60%;
+    width: 30vw;
+    height: 50vh;
+  
+}
+
+.rotate .roll {
+   
+    position: relative;
+    width: 150px;
+    height: 200px;
+    left: calc(45% - 60px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun1 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun1 {
+    from {
+        transform: perspective(1000px) rotateX(-25deg) rotateY(360deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-25deg) rotateY(0deg);
+    }
+}
+
+.rotate .roll .photo {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(170px);
+}
+
+.rotate .roll .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: 100%;
+}
+
+.rotate .content {
+    position: absolute;
+    top: -25%;
+    left: -40px;
+    transform: translateX(-4%);
+    width: min(250px, 40vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 5;
+}
+
+.rotate .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 2.3em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+    -webkit-text-stroke: 2px #faf1f1;
+    color: transparent;
+
+}
+
+.rotate .content h1::after {
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    -webkit-text-stroke: 2px #faf1f1;
+    color: transparent;
+
+}
+
+main{
+    /* width: min(2500px, 100vw); */
+    margin: auto;
+    
+}
+
+/* slider front page */
+
+.slider1{
+    /* width: 80vw; */
+    height: var(--height);
+    margin-top: -17vh;
+
+}
+
+.slider1 .list{
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    margin-left: -70px;
+    min-width: calc(var(--width) * var(--quantity));
+    position: absolute; 
+    /* border: 3px solid red; */
+    
+}
+
+.slider1 .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 95%;
+    animation: autoRun 20s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) - 20s)!important;
+  
+}
+
+.slider1 .list .item img{
+    width: 90%;
+    border: 2px solid blue;
+    border-radius: 10px;
+    
+}
+@keyframes autoRun{
+    from{
+        left: 95%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider1:hover .item {
+   
+    filter: grayscale(1);
+    animation-play-state: paused!important;
+    
+}
+.slider1 .item:hover{
+    filter: grayscale(0);
+    width: 380px;
+    top: -420px;
+    z-index: 2;
+}
+
+
+/* slider gallory */
+
+.slider{
+
+    height: var(--height);
+    margin-top: -20vh;
+
+}
+.slider .list{
+    display: flex;
+    height: 8%;
+   margin: 0 10px;
+    min-width: calc(var(--width) * var(--quantity));
+    position: absolute; 
+
+    
+}
+
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 95%;
+    animation: autoRun 20s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) - 20s)!important;
+  
+}
+
+.slider .list .item img{
+    width: 97%;
+    border: 1px solid blue;
+    border-radius: 5px;
+    
+}
+@keyframes autoRun{
+    from{
+        left: 95%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item {
+   
+    filter: grayscale(1);
+    animation-play-state: paused!important;
+    
+}
+.slider .item:hover{
+    filter: grayscale(0);
+    width: 850px;
+    top: -510px;
+    z-index: 2;
+}
+
+.wrapper {
+    width: 100%;
+    height: 80vh;
+    margin-top: 1.5%;
+    
+}
+
+.container {
+    width: 97vw;
+    height: 62vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    margin-top: 30px;
+    margin-left: -50px;
+}
+
+.card {
+    width: 5%;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 1% .5%;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+
+
+input {
+    display: none;
+}
+
+input:checked+label {
+    width: 100%;
+}
+
+input:checked+label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+
+.card[for="c1"] {
+    background-image: url('ITIphotos/INDUSTRY_VISIT.jpg');
+    background-size: cover;
+}
+
+.card[for="c2"] {
+    background-image: url('ITIphotos/PPP_PRESENT.jpg');
+    background-size: cover;
+}
+
+.card[for="c3"] {
+    background-image: url('ITIphotos/PRAYER _SPORTS.jpg');
+    background-size: cover;
+}
+
+.card[for="c4"] {
+    background-image: url('ITIphotos/WORKSHOPINAUGURATION2.jpg');
+    background-size: cover;
+}
+
+.card[for="c5"] {
+    background-image: url('ITIphotos/IMG-20220712.jpg');
+    background-size: cover;
+}
+
+.card[for="c6"] {
+    background-image: url('ITIphotos/IMG-20220712-WA0048.jpeg');
+    background-size: cover;
+}
+
+.card[for="c7"] {
+    background-image: url('ITIphotos/IMG-20211008.jpg');
+    background-size: cover;
+}
+
+.card[for="c8"] {
+    background-image: url('ITIphotos/IMG_20171108.jpg');
+    background-size: cover;
+}
+
+.card[for="c9"] {
+    background-image: url('ITIphotos/BUILDING.jpg');
+    background-size: cover;
+}
+
+.card[for="c10"] {
+    background-image: url('ITIphotos/FRONT_GROUP.jpg');
+    background-size: cover;
+}
+
+.card[for="c11"] {
+    background-image: url('ITIphotos/flag.jpg');
+    background-size: cover;
+}
+
+.card[for="c12"] {
+    background-image: url('ITIphotos/group_2.jpg');
+    background-size: cover;
+}
+
+.card[for="c13"] {
+    background-image: url('ITIphotos/FLOOR_PLANER.jpg');
+    background-size: cover;
+}
+
+.card[for="c14"] {
+    background-image: url('ITIphotos/2017-05-14.jpg');
+    background-size: cover;
+}
+
+.card[for="c15"] {
+    background-image: url('ITIphotos/IMG_20160704.jpg');
+    background-size: cover;
+}
+
+.card[for="c16"] {
+    background-image: url('ITIphotos/IMG-20211020.jpg');
+    background-size: cover;
+}
+
+.card[for="c17"] {
+    background-image: url('ITIphotos/IMG-20220722.jpeg');
+    background-size: cover;
+}
+
+.card[for="c18"] {
+    background-image: url('ITIphotos/IMG_20180421.jpg');
+    background-size: cover;
+}
+
+.card[for="c19"] {
+    background-image: url('ITIphotos/IMG-20211007.jpg');
+    background-size: cover;
+}
+
+.card[for="c20"] {
+    background-image: url('ITIphotos/IMG-20220712-WA0048.jpeg');
+    background-size: cover;
+}
+
+.card[for="c21"] {
+    background-image: url('ITIphotos/Sendoff_Gurusiddaiah.jpg');
+    background-size: cover;
+}
+
+
+.card[for="c22"] {
+    background-image: url('ITIphotos/INDUSTRIAL_VISIT_1.jpg');
+    background-size: cover;
+}
+
+
+
+
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    /* Styles for mobile */
+    body {
+      font-size: 14px;
+    }
+
+    header{
+        height: 5vh;
+        margin: 0;
+        left:40px;
+    }
+    .itilogo {
+        left: -6vw;
+        margin-top: -5px;
+    }
+    
+    .itilogo img {
+        width: 100px;
+        height: 20px;
+    }
+
+    .govtlogo {
+        left: 24vw;
+        padding: 0;
+    }
+    
+    .govtlogo img {
+        width: 40px;
+        height: 35px;
+    }
+
+    li{
+        padding: 0;
+    }
+    a {
+        font-size: .5rem;
+        padding: 0;
+    }
+   
+    ul{
+        margin-left: -55px;
+        margin-top: -10px;
+       
+    }
+    .cover {
+        background-image: url(image/background_small.png);
+        background-size: 100%;
+    }
+
+    .rotate .roll {
+        width: 85px;
+        height: 120px;
+        left: -20vw;
+        top: 42vh;
+    }
+
+    .rotate .roll .photo {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(95px);
+    }
+    .rotate .content {
+
+        width: min(150px, 40vw);
+
+    }
+
+    .rotate .content h1 {
+        font-size: 1.5em;
+        line-height: 1em;
+        left: 30px; 
+    }
+    #home{
+        background-image:url(image/mix_small.png) ;
+    }
+
+    .main{
+        display: block;
+    }
+
+    .slider1{
+        margin-top: 20vh; 
+    }
+    .slider1 .item:hover{
+
+        width: 200px;
+        top: -155px;
+
+    }
+
+    .image_aboutus {
+        width: 80vw;
+        height: 30vh;
+    }
+
+    span{
+        font-size: 0.8rem; 
+    }
+
+    h4{
+        font-size: 0.6rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    img.image {
+        max-width: 450px;
+        max-height: 380px;
+        left: 25px;
+        top: 8px;
+    }
+
+    .container {
+        width: 150vw;
+        height: 25vh;
+        margin-top: 20vh;
+    
+    }
+    .slider{
+        margin-top: -25vh;
+        margin-left: 10vw;
+    }
+
+    .slider .item:hover{
+      
+        width: 300px;
+        top: -75px;
+  
+    }
+
+    #video {
+    padding-left: 2%;
+    }
+
+}
+
+ 
+
+  /* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    /* Styles for tablets */
+    body {
+      font-size: 16px;
+    }
+    header{
+        margin: 0;
+        left:70px;
+    }
+    .itilogo {
+        left: -6vw;
+        margin-top: -5px;
+    }
+    
+    .itilogo img {
+        width: 200px;
+        height: 40px;
+    }
+
+    .govtlogo {
+        left: 24vw;
+        margin-left: 40px;
+    }
+    
+    .govtlogo img {
+        width: 75px;
+        height: 65px;
+    }
+
+    li{
+        padding: 5px;
+    }
+    a {
+        font-size: 1rem;
+        padding: 0;
+    }
+   
+    ul{
+        margin-left: -120px;
+        margin-top: 0px;
+       
+    }
+    .cover {
+        background-image: url(image/background_small.png);
+        background-size: 100%;
+    }
+
+    .rotate .roll {
+        width: 150px;
+        height: 190px;
+        left: -20vw;
+        top: 42vh;
+    }
+
+    .rotate .roll .photo {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
+    }
+    .rotate .content {
+
+        width: min(200px, 60vw);
+
+    }
+
+    .rotate .content h1 {
+        font-size: 2em;
+        line-height: 1em;
+        left: 30px; 
+    }
+    #home{
+        background-image:url(image/mix_medium.png) ;
+       
+    }
+
+    .main{
+        display: block;
+    }
+
+    .slider1{
+        margin-top: 20vh; 
+    }
+    .slider1 .item:hover{
+
+        width: 500px;
+        top: -600px;
+
+    }
+
+    .image_aboutus {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    span{
+        font-size: 1.5rem; 
+    }
+
+    h4{
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    img.image {
+        max-width: 750px;
+        max-height: 550px;
+        left: 150px;
+        top: 10px;
+    }
+
+    .container {
+        width: 150vw;
+        height: 25vh;
+        margin-top: 1vh;
+    
+    }
+    .slider{
+        margin-top: -20vh;
+        margin-left: 10vw;
+    }
+
+    .slider .item:hover{
+      
+        width: 600px;
+        top: -250px;
+  
+    }
+
+    #video {
+    padding-left: 2%;
+    }
+   
+  }
+
+  /* Laptop */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  /* Styles for laptops */
+  body {
+    font-size: 18px;
+  }
+  header {
+    height: 7vh;
+    margin: 0;
+    left: 70px;
+}
+
+.itilogo {
+    left: -6vw;
+    margin-top: -5px;
+}
+
+.itilogo img {
+    width: 200px;
+    height: 40px;
+}
+
+.govtlogo {
+    left: 24vw;
+    margin-left: 40px;
+}
+
+.govtlogo img {
+    width: 75px;
+    height: 65px;
+}
+
+.navbar {
+    /* display: flex; */
+    width: 50%;
+    /* position: absolute; */
+    top: 20px;
+    left: 40%;
+    border-radius: 20px;
+}
+
+.cover {
+    background-image: url(image/background_small.png);
+    background-size: 100%;
+}
+
+.image_aboutus {
+    width: 50vw;
+    height: 20vh;
+    margin-top: 200px;
+}
+h4{
+    margin-top: 10vh;
+}
+
+img.image {
+
+    top: 180px;
+}
+
+.container {
+    width: 100vw;
+    height: 25vh;
+    margin-top: 11vh;
+
+}
+
+.slider{
+    margin-top: -40vh;
+    margin-left: 0vw;
+}
+
+.slider .item:hover{
+      
+    width: 550px;
+    top: -300px;
+
+}
+
+video {
+    width: 90%;
+    
+    }
+
+#home {
+    width: 100%;
+    background-image: url(image/mix_small.png);
+    background-size: cover;
+}
+.rotate .roll {
+    width: 150px;
+    height: 190px;
+    left: 10vw;
+    top: 12vh;
+}
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 1201px) {
+  /* Styles for desktops */
+  body {
+    font-size: 20px;
+  }
+}
+
+
+
